@@ -767,6 +767,23 @@
     consola "^2.15.0"
     node-fetch "^2.6.1"
 
+"@prisma/client@4.8.1":
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-4.8.1.tgz#51c16488dfac4e74a275a2753bf20262a65f2a2b"
+  integrity sha512-d4xhZhETmeXK/yZ7K0KcVOzEfI5YKGGEr4F5SBV04/MU4ncN/HcE28sy3e4Yt8UFW0ZuImKFQJE+9rWt9WbGSQ==
+  dependencies:
+    "@prisma/engines-version" "4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe"
+
+"@prisma/engines-version@4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe":
+  version "4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe.tgz#30401aba1029e7d32e3cb717e705a7c92ccc211e"
+  integrity sha512-MHSOSexomRMom8QN4t7bu87wPPD+pa+hW9+71JnVcF3DqyyO/ycCLhRL1we3EojRpZxKvuyGho2REQsMCvxcJw==
+
+"@prisma/engines@4.8.1":
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-4.8.1.tgz#8428f7dcd7912c6073024511376595017630dc85"
+  integrity sha512-93tctjNXcIS+i/e552IO6tqw17sX8liivv8WX9lDMCpEEe3ci+nT9F+1oHtAafqruXLepKF80i/D20Mm+ESlOw==
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.24.51.tgz"
@@ -948,7 +965,7 @@
   resolved "https://registry.npmjs.org/@types/mime/-/mime-3.0.1.tgz"
   integrity sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==
 
-"@types/node@*", "@types/node@18.11.18":
+"@types/node@*", "@types/node@^18.11.18":
   version "18.11.18"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.11.18.tgz"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
@@ -3762,6 +3779,13 @@ pretty-format@^29.0.0, pretty-format@^29.3.1:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
+prisma@^4.8.1:
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-4.8.1.tgz#ef93cd908809b7d02e9f4bead5eea7733ba50c68"
+  integrity sha512-ZMLnSjwulIeYfaU1O6/LF6PEJzxN5par5weykxMykS9Z6ara/j76JH3Yo2AH3bgJbPN4Z6NeCK9s5fDkzf33cg==
+  dependencies:
+    "@prisma/engines" "4.8.1"
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
@@ -4369,9 +4393,9 @@ ts-loader@^9.2.3:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-ts-node@^10.0.0:
+ts-node@^10.9.1:
   version "10.9.1"
-  resolved "https://registry.npmjs.org/ts-node/-/ts-node-10.9.1.tgz"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.9.1.tgz#e73de9102958af9e1f0b168a6ff320e25adcff4b"
   integrity sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==
   dependencies:
     "@cspotcode/source-map-support" "^0.8.0"
@@ -4467,7 +4491,7 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@4.9.4, typescript@^4.7.4:
+typescript@4.9.4, typescript@^4.9.4:
   version "4.9.4"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.9.4.tgz"
   integrity sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==

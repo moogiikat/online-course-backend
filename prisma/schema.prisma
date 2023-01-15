@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  firstname    String
+  lastname     String?
+  email        String    @unique
+  role         Role      @default(USER)
+  confirmed_at DateTime?
+  password     String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @default(now()) @updatedAt
+
+  @@map("user")
+}
+
+model RefreshToken {
+  id         Int      @id @default(autoincrement())
+  user_id    Int
+  is_revoked Boolean
+  expires    DateTime
+
+  @@map("refresh_token")
+}
+
+model Course {
+  id                Int     @id @default(autoincrement())
+  name              String
+  description       String
+  image_path        String?
+  introduction_path String
+
+  category_id Int
+  contents    Content[]
+
+  category Category @relation(fields: [category_id], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@map("course")
+}
+
+model Category {
+  id         Int      @id @default(autoincrement())
+  name       String
+  image_path String?
+  courses    Course[]
+
+  @@map("category")
+}
+
+model Content {
+  id        Int     @id @default(autoincrement())
+  name      String
+  path      String?
+  course_id Int
+
+  course Course @relation(fields: [course_id], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@map("content")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
